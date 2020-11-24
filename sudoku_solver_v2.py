@@ -17,15 +17,15 @@ preset_board = [
 def setup_board():
 
     user_board = [
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
-        ['_', '_', '_', '_', '_', '_', '_', '_', '_']
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_", "_"]
     ]
 
     print("\nEnter a number you would like in the cell marked 'X'.\nEnter a number from 1 - 9, or 0 to leave it empty.\nIf you want to go back to last cell, enter b.")
@@ -34,14 +34,14 @@ def setup_board():
         j = 0
         while j < 9:
             print()
-            user_board[i][j] = 'X'
+            user_board[i][j] = "X"
             print_board(user_board)
             cell = input("Enter number you want in X cell: ")
-            if cell == 'b':
+            if cell == "b":
                 if j == 0:
                     print("You are already at the first cell.")
                 else:
-                    user_board[i][j] = '_'
+                    user_board[i][j] = "_"
                     j -= 2
             elif not cell.isdigit():
                 print("Not a number. Please enter a number between 1 and 9, or 0.")
