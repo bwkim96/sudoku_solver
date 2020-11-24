@@ -1,3 +1,5 @@
+# Version 1 of Sudoku Solver: simple text-based sudoku solver
+
 board = [
     [7, 8, 0, 4, 0, 0, 1, 2, 0],
     [6, 0, 0, 0, 7, 5, 0, 0, 9],
@@ -10,7 +12,7 @@ board = [
     [0, 4, 9, 2, 0, 6, 0, 0, 7]
 ]
 
-# function to print the board to terminal
+# function to print the board to command line
 def print_board(board):
     for i in range(len(board)):
         if i % 3 == 0:
@@ -76,9 +78,7 @@ def solve_sudoku(board):
 
 print_board(board)
 
-# for i in range(1, 10):
-#     print(i, check_valid(board, i, 0, 2))
-
 print("SOLVING THE BOARD...")
 solve_sudoku(board)
+
 print_board(board)
